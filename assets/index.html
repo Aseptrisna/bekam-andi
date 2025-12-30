@@ -1,0 +1,530 @@
+<!DOCTYPE html>
+<html lang="id" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Andi Bekam - Layanan Bekam, Refleksi, Akupunktur, dan Ruqyah Syar'iyyah profesional dan terpercaya. Solusi kesehatan alami untuk keluarga Anda.">
+    <meta name="keywords" content="Bekam, Refleksi, Akupunktur, Ruqyah, Terapi Kesehatan, Pengobatan Alternatif, Andi Bekam">
+    <meta name="author" content="Andi Bekam">
+    <title>Andi Bekam | Pusat Terapi Kesehatan Holistik</title>
+
+    <!-- Tailwind CSS (Via CDN for immediate usage without build step) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+    <!-- Schema.org Markup for Local Business (SEO) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "HealthAndBeautyBusiness",
+      "name": "Andi Bekam",
+      "image": "https://placehold.co/600x400/10B981/FFFFFF?text=Andi+Bekam",
+      "description": "Layanan terapi kesehatan Bekam, Refleksi, Akupunktur dan Ruqyah Syar'iyyah.",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "Komplek Puragabaya, Jl. Cijawura Girang No.14",
+        "addressLocality": "Sekejati, Kec. Buahbatu", 
+        "addressRegion": "Kota Bandung, Jawa Barat",
+        "postalCode": "40286",
+        "addressCountry": "ID"
+      },
+      "priceRange": "$$",
+      "telephone": "+682215207329"
+    }
+    </script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Poppins', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: '#047857', // Emerald 700
+                        secondary: '#D97706', // Amber 600
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        .hero-bg {
+            background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-700 bg-gray-50">
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-50 transition-all duration-300" id="navbar">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between h-20">
+                <div class="flex items-center">
+                    <a href="#" class="flex-shrink-0 flex items-center gap-2">
+                        <div class="w-10 h-10 bg-primary rounded-full flex items-center justify-center text-white text-xl font-bold">A</div>
+                        <span class="font-bold text-2xl text-primary">Andi Bekam</span>
+                    </a>
+                </div>
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="text-gray-600 hover:text-primary font-medium transition">Beranda</a>
+                    <a href="#layanan" class="text-gray-600 hover:text-primary font-medium transition">Layanan</a>
+                    <a href="#tarif" class="text-gray-600 hover:text-primary font-medium transition">Tarif</a>
+                    <a href="#produk" class="text-gray-600 hover:text-primary font-medium transition">Produk</a>
+                    <a href="#galeri" class="text-gray-600 hover:text-primary font-medium transition">Galeri</a>
+                    <a href="#lokasi" class="text-gray-600 hover:text-primary font-medium transition">Lokasi</a>
+                    <a href="https://wa.me/682215207329?text=Halo%20Andi%20Bekam,%20saya%20ingin%20reservasi." target="_blank" class="bg-primary text-white px-5 py-2.5 rounded-full font-medium hover:bg-green-800 transition shadow-lg flex items-center gap-2">
+                        <i class="fab fa-whatsapp"></i> Reservasi
+                    </a>
+                </div>
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden flex items-center">
+                    <button id="mobile-menu-btn" class="text-gray-600 hover:text-primary focus:outline-none">
+                        <svg class="h-8 w-8" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu Panel -->
+        <div class="md:hidden hidden bg-white border-t" id="mobile-menu">
+            <div class="px-2 pt-2 pb-3 space-y-1 sm:px-3">
+                <a href="#home" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">Beranda</a>
+                <a href="#layanan" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">Layanan</a>
+                <a href="#tarif" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">Tarif</a>
+                <a href="#produk" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">Produk</a>
+                <a href="#galeri" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">Galeri</a>
+                <a href="#lokasi" class="block px-3 py-2 rounded-md text-base font-medium text-gray-700 hover:text-primary hover:bg-gray-50">Lokasi</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-bg h-screen flex items-center justify-center text-center px-4 pt-20">
+        <div class="max-w-4xl mx-auto text-white">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 leading-tight animate-fade-in-up">Sehat Alami Sesuai Sunnah & Medis</h1>
+            <p class="text-xl md:text-2xl mb-10 opacity-90">Solusi kesehatan holistik melalui Bekam, Refleksi, Akupunktur, dan Ruqyah Syar'iyyah.</p>
+            <div class="flex flex-col sm:flex-row gap-4 justify-center">
+                <a href="#layanan" class="bg-secondary hover:bg-amber-700 text-white px-8 py-3 rounded-full text-lg font-semibold transition shadow-lg">Lihat Layanan</a>
+                <a href="https://wa.me/682215207329?text=Assalamualaikum,%20saya%20tertarik%20dengan%20layanan%20Andi%20Bekam" target="_blank" class="bg-transparent border-2 border-white hover:bg-white hover:text-primary text-white px-8 py-3 rounded-full text-lg font-semibold transition">Hubungi Kami</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4 text-center">
+            <h2 class="text-3xl font-bold text-gray-800 mb-4">Mengapa Memilih Andi Bekam?</h2>
+            <div class="w-20 h-1 bg-primary mx-auto mb-10"></div>
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="p-6 bg-gray-50 rounded-xl hover:shadow-xl transition duration-300">
+                    <div class="w-16 h-16 bg-green-100 text-primary rounded-full flex items-center justify-center text-3xl mx-auto mb-4">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Terapis Profesional</h3>
+                    <p class="text-gray-600">Ditangani oleh praktisi yang bersertifikat dan berpengalaman di bidangnya.</p>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-xl hover:shadow-xl transition duration-300">
+                    <div class="w-16 h-16 bg-green-100 text-primary rounded-full flex items-center justify-center text-3xl mx-auto mb-4">
+                        <i class="fas fa-hand-sparkles"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Higienis & Steril</h3>
+                    <p class="text-gray-600">Kami menjamin kebersihan alat dan tempat demi keamanan dan kenyamanan pasien.</p>
+                </div>
+                <div class="p-6 bg-gray-50 rounded-xl hover:shadow-xl transition duration-300">
+                    <div class="w-16 h-16 bg-green-100 text-primary rounded-full flex items-center justify-center text-3xl mx-auto mb-4">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-2">Metode Holistik</h3>
+                    <p class="text-gray-600">Menggabungkan pendekatan Thibbun Nabawi dan kesehatan modern.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="layanan" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2">Layanan Kami</h2>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
+                <p class="mt-4 text-gray-600">Pilihan terapi terbaik untuk pemulihan kesehatan Anda.</p>
+            </div>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition group">
+                    <div class="h-48 overflow-hidden relative">
+                        <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Terapi Bekam" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                        <div class="absolute top-0 right-0 bg-secondary text-white text-xs font-bold px-3 py-1 m-2 rounded">Populer</div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Terapi Bekam</h3>
+                        <p class="text-gray-600 text-sm mb-4">Mengeluarkan darah kotor dan toksin, melancarkan peredaran darah, dan meningkatkan imunitas.</p>
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition group">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1544161515-4ab6ce6db874?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Pijat Refleksi" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Refleksi</h3>
+                        <p class="text-gray-600 text-sm mb-4">Pijatan pada titik syaraf kaki dan tangan untuk relaksasi dan mengatasi kelelahan fisik.</p>
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition group">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Akupunktur" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Akupunktur</h3>
+                        <p class="text-gray-600 text-sm mb-4">Terapi tusuk jarum untuk keseimbangan energi (Qi), meredakan nyeri, dan stroke.</p>
+                    </div>
+                </div>
+
+                 <!-- Card 4 -->
+                 <div class="bg-white rounded-xl shadow-md overflow-hidden hover:shadow-xl transition group">
+                    <div class="h-48 overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1629904853716-6c0c4c235688?ixlib=rb-4.0.3&auto=format&fit=crop&w=600&q=80" alt="Ruqyah Syar'iyyah" class="w-full h-full object-cover group-hover:scale-110 transition duration-500">
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">Ruqyah & Konsul</h3>
+                        <p class="text-gray-600 text-sm mb-4">Terapi bacaan ayat Al-Qur'an untuk gangguan non-medis dan ketenangan jiwa.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="tarif" class="py-16 bg-white">
+        <div class="max-w-4xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2">Daftar Tarif</h2>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
+                <p class="mt-4 text-gray-600">Harga terjangkau untuk kesehatan yang tak ternilai.</p>
+            </div>
+
+            <div class="bg-white rounded-2xl shadow-lg border border-gray-100 overflow-hidden">
+                <!-- Single Service -->
+                <div class="bg-primary px-6 py-4">
+                    <h3 class="text-white font-bold text-lg">Layanan Satuan</h3>
+                </div>
+                <div class="divide-y divide-gray-100">
+                    <div class="flex justify-between items-center p-5 hover:bg-gray-50">
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-check-circle text-primary"></i>
+                            <span class="font-medium text-gray-700">Bekam</span>
+                        </div>
+                        <span class="font-bold text-primary text-lg">Rp 120.000</span>
+                    </div>
+                    <div class="flex justify-between items-center p-5 hover:bg-gray-50">
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-check-circle text-primary"></i>
+                            <span class="font-medium text-gray-700">Refleksi</span>
+                        </div>
+                        <span class="font-bold text-primary text-lg">Rp 120.000</span>
+                    </div>
+                    <div class="flex justify-between items-center p-5 hover:bg-gray-50">
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-check-circle text-primary"></i>
+                            <span class="font-medium text-gray-700">Akupunktur</span>
+                        </div>
+                        <span class="font-bold text-primary text-lg">Rp 120.000</span>
+                    </div>
+                </div>
+
+                <!-- Paket Hemat -->
+                <div class="bg-secondary px-6 py-4 mt-2">
+                    <h3 class="text-white font-bold text-lg">Paket Hemat (Combo)</h3>
+                </div>
+                <div class="divide-y divide-gray-100">
+                    <div class="flex justify-between items-center p-5 hover:bg-gray-50">
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-star text-secondary"></i>
+                            <span class="font-medium text-gray-700">Bekam + Refleksi</span>
+                        </div>
+                        <span class="font-bold text-secondary text-lg">Rp 170.000</span>
+                    </div>
+                    <div class="flex justify-between items-center p-5 hover:bg-gray-50">
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-star text-secondary"></i>
+                            <span class="font-medium text-gray-700">Bekam + Akupunktur</span>
+                        </div>
+                        <span class="font-bold text-secondary text-lg">Rp 170.000</span>
+                    </div>
+                    <div class="flex justify-between items-center p-5 hover:bg-gray-50">
+                        <div class="flex items-center gap-3">
+                            <i class="fas fa-star text-secondary"></i>
+                            <span class="font-medium text-gray-700">Refleksi + Akupunktur</span>
+                        </div>
+                        <span class="font-bold text-secondary text-lg">Rp 170.000</span>
+                    </div>
+                </div>
+                 <!-- Spesial -->
+                 <div class="bg-gray-800 px-6 py-4 mt-2">
+                    <h3 class="text-white font-bold text-lg">Layanan Spiritual</h3>
+                </div>
+                <div class="p-5 hover:bg-gray-50 flex justify-between items-center bg-yellow-50">
+                    <div class="flex items-center gap-3">
+                        <i class="fas fa-hand-holding-heart text-gray-800"></i>
+                        <span class="font-medium text-gray-800">Ruqyah & Konsul Spiritual</span>
+                    </div>
+                    <span class="font-bold text-gray-800 text-lg bg-yellow-200 px-3 py-1 rounded">SUKARELA / Infaq</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Product Section -->
+    <section id="produk" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2">Produk Kami</h2>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
+                <p class="mt-4 text-gray-600">Produk pendukung kesehatan alami.</p>
+            </div>
+            
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Product 1 -->
+                <div class="bg-white rounded-lg shadow p-4 flex flex-col items-center">
+                    <img src="./assets/produk/cuka-apel.jpeg" alt="Minyak Herba" class="w-40 h-40 object-cover rounded mb-4">
+                    <h4 class="font-bold text-lg">Cuka Apel</h4>
+                    <p class="text-gray-500 text-sm mb-3">Membantu Mengatur gula darah</p>
+                    <a href="https://wa.me/682215207329?text=Saya%20mau%20pesan%20Minyak%20Herba" class="text-primary font-semibold hover:underline">Pesan Sekarang &rarr;</a>
+                </div>
+                <!-- Product 2 -->
+                <div class="bg-white rounded-lg shadow p-4 flex flex-col items-center">
+                    <img src="./assets/produk/madu-hitam.jpeg" alt="Madu Murni" class="w-40 h-40 object-cover rounded mb-4">
+                    <h4 class="font-bold text-lg">Madu Hitam</h4>
+                    <p class="text-gray-500 text-sm mb-3">Suplemen alami peningkat imun</p>
+                    <a href="https://wa.me/682215207329?text=Saya%20mau%20pesan%20Madu%20Murni" class="text-primary font-semibold hover:underline">Pesan Sekarang &rarr;</a>
+                </div>
+                <!-- Product 3 -->
+                <!-- <div class="bg-white rounded-lg shadow p-4 flex flex-col items-center">
+                    <img src="https://placehold.co/300x300/E5E7EB/4B5563?text=Habbatussauda" alt="Habbatussauda" class="w-40 h-40 object-cover rounded mb-4">
+                    <h4 class="font-bold text-lg">Kapsul Habbatussauda</h4>
+                    <p class="text-gray-500 text-sm mb-3">Jintan hitam grade A</p>
+                    <a href="https://wa.me/682215207329?text=Saya%20mau%20pesan%20Habbatussauda" class="text-primary font-semibold hover:underline">Pesan Sekarang &rarr;</a>
+                </div> -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section (NEW) -->
+    <section id="galeri" class="py-16 bg-white">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="text-center mb-12">
+                <h2 class="text-3xl font-bold text-gray-800 mb-2">Galeri Kegiatan</h2>
+                <div class="w-20 h-1 bg-primary mx-auto"></div>
+                <p class="mt-4 text-gray-600">Dokumentasi suasana dan kegiatan terapi di Andi Bekam.</p>
+            </div>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                <div class="relative overflow-hidden group rounded-lg shadow-md h-64">
+                    <img src="./assets/gallery/satu.jpeg" alt="Suasana Terapi" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                    <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <span class="text-white font-semibold">Suasana Nyaman</span>
+                    </div>
+                </div>
+                <div class="relative overflow-hidden group rounded-lg shadow-md h-64">
+                    <img src="./assets/gallery/dua.jpeg" alt="Peralatan Steril" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                     <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <span class="text-white font-semibold">Alat Steril</span>
+                    </div>
+                </div>
+                <div class="relative overflow-hidden group rounded-lg shadow-md h-64">
+                    <img src="https://images.unsplash.com/photo-1600334129128-685c5582fd35?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Terapi Refleksi" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                     <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <span class="text-white font-semibold">Refleksi Kaki</span>
+                    </div>
+                </div>
+                <div class="relative overflow-hidden group rounded-lg shadow-md h-64">
+                    <img src="https://images.unsplash.com/photo-1515377905703-c4788e51af15?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Ruang Tunggu" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                     <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <span class="text-white font-semibold">Ruang Tunggu</span>
+                    </div>
+                </div>
+                <div class="relative overflow-hidden group rounded-lg shadow-md h-64">
+                    <img src="https://images.unsplash.com/photo-1598450165525-47029671d2b1?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Konsultasi" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                     <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <span class="text-white font-semibold">Konsultasi</span>
+                    </div>
+                </div>
+                <div class="relative overflow-hidden group rounded-lg shadow-md h-64">
+                    <img src="https://images.unsplash.com/photo-1519823551278-64ac92734fb1?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Proses Bekam" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                     <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <span class="text-white font-semibold">Proses Terapi</span>
+                    </div>
+                </div>
+                 <div class="relative overflow-hidden group rounded-lg shadow-md h-64">
+                    <img src="https://placehold.co/600x600/10B981/FFFFFF?text=Produk+Herbal" alt="Produk Herbal" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                     <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <span class="text-white font-semibold">Stok Herbal</span>
+                    </div>
+                </div>
+                 <div class="relative overflow-hidden group rounded-lg shadow-md h-64">
+                    <img src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?ixlib=rb-1.2.1&auto=format&fit=crop&w=600&q=80" alt="Kebersihan" class="w-full h-full object-cover transform group-hover:scale-110 transition duration-500">
+                     <div class="absolute inset-0 bg-black bg-opacity-40 flex items-center justify-center opacity-0 group-hover:opacity-100 transition duration-300">
+                        <span class="text-white font-semibold">Sanitasi Rutin</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location / Maps Section -->
+    <section id="lokasi" class="py-16 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4">
+            <div class="grid md:grid-cols-2 gap-10 items-center">
+                <div>
+                    <h2 class="text-3xl font-bold text-gray-800 mb-6">Kunjungi Tempat Kami</h2>
+                    <p class="text-gray-600 mb-6">Lokasi strategis dengan parkir luas. Silakan datang langsung atau buat janji terlebih dahulu untuk menghindari antrian.</p>
+                    
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-4">
+                            <div class="bg-primary/10 p-3 rounded-full text-primary">
+                                <i class="fas fa-map-marker-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Alamat</h4>
+                                <p class="text-gray-600">Komplek Puragabaya, Jl. Cijawura Girang No.14,<br>Sekejati, Kec. Buahbatu, Kota Bandung,<br>Jawa Barat 40286</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-4">
+                            <div class="bg-primary/10 p-3 rounded-full text-primary">
+                                <i class="fas fa-clock text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Jam Operasional</h4>
+                                <p class="text-gray-600">Senin - Sabtu: 08.00 - 20.00 WIB<br>Minggu: Dengan Perjanjian</p>
+                            </div>
+                        </div>
+                         <div class="flex items-start gap-4">
+                            <div class="bg-primary/10 p-3 rounded-full text-primary">
+                                <i class="fas fa-phone-alt text-xl"></i>
+                            </div>
+                            <div>
+                                <h4 class="font-bold text-gray-800">Kontak</h4>
+                                <p class="text-gray-600">+62 822-1520-7329 (WA/Telp)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="h-96 w-full bg-gray-200 rounded-xl overflow-hidden shadow-lg border-4 border-white">
+                    <!-- Google Maps Embed -->
+                    <iframe 
+                        src="https://maps.google.com/maps?q=Komplek+Puragabaya,+Jl.+Cijawura+Girang+No.14,+Sekejati,+Kec.+Buahbatu,+Kota+Bandung,+Jawa+Barat+40286&t=&z=15&ie=UTF8&iwloc=&output=embed" 
+                        width="100%" 
+                        height="100%" 
+                        style="border:0;" 
+                        allowfullscreen="" 
+                        loading="lazy"
+                        title="Peta Lokasi Andi Bekam">
+                    </iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action Banner -->
+    <section class="bg-primary py-12">
+        <div class="max-w-4xl mx-auto px-4 text-center text-white">
+            <h2 class="text-2xl md:text-3xl font-bold mb-4">Siap untuk Tubuh yang Lebih Sehat?</h2>
+            <p class="mb-8 opacity-90">Jangan tunggu sakit, cegah dan obati dengan metode alami terbaik.</p>
+            <a href="https://wa.me/682215207329?text=Saya%20mau%20booking%20jadwal%20bekam" target="_blank" class="bg-white text-primary px-8 py-3 rounded-full font-bold hover:bg-gray-100 transition shadow-lg inline-flex items-center gap-2">
+                <i class="fab fa-whatsapp text-2xl"></i> Booking Via WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white pt-12 pb-6">
+        <div class="max-w-7xl mx-auto px-4 text-center md:text-left">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div class="col-span-1 md:col-span-2">
+                    <div class="flex items-center justify-center md:justify-start gap-2 mb-4">
+                         <div class="w-8 h-8 bg-primary rounded-full flex items-center justify-center text-white font-bold">A</div>
+                        <h3 class="text-2xl font-bold">Andi Bekam</h3>
+                    </div>
+                    <p class="text-gray-400 leading-relaxed max-w-sm mx-auto md:mx-0">
+                        Menyediakan layanan kesehatan holistik terpercaya dengan metode Thibbun Nabawi dan komplementer modern untuk kebugaran masyarakat.
+                    </p>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Navigasi</h4>
+                    <ul class="space-y-2 text-gray-400">
+                        <li><a href="#home" class="hover:text-white transition">Beranda</a></li>
+                        <li><a href="#layanan" class="hover:text-white transition">Layanan</a></li>
+                        <li><a href="#tarif" class="hover:text-white transition">Daftar Tarif</a></li>
+                        <li><a href="#lokasi" class="hover:text-white transition">Lokasi</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-lg font-bold mb-4">Sosial Media</h4>
+                    <div class="flex justify-center md:justify-start space-x-4">
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-primary transition"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="border-t border-gray-800 pt-6 text-center text-gray-500 text-sm">
+                &copy; 2023 Andi Bekam. All Rights Reserved. Designed for UMKM Indonesia.
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating WhatsApp Button -->
+    <a href="https://wa.me/682215207329?text=Halo%20Andi%20Bekam,%20saya%20butuh%20info%20lebih%20lanjut." 
+       target="_blank"
+       class="fixed bottom-6 right-6 bg-green-500 text-white p-4 rounded-full shadow-2xl hover:bg-green-600 transition duration-300 z-50 flex items-center justify-center animate-bounce"
+       aria-label="Chat WhatsApp">
+        <i class="fab fa-whatsapp text-3xl"></i>
+    </a>
+
+    <!-- Simple JavaScript for Mobile Menu & Scroll -->
+    <script>
+        // Mobile Menu Toggle
+        const btn = document.getElementById('mobile-menu-btn');
+        const menu = document.getElementById('mobile-menu');
+
+        btn.addEventListener('click', () => {
+            menu.classList.toggle('hidden');
+        });
+
+        // Close mobile menu when link is clicked
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                menu.classList.add('hidden');
+            });
+        });
+
+        // Navbar Shadow on Scroll
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 10) {
+                navbar.classList.add('shadow-lg');
+            } else {
+                navbar.classList.remove('shadow-lg');
+            }
+        });
+    </script>
+</body>
+</html>
